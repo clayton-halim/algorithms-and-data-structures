@@ -16,7 +16,7 @@ int main(int argc, char *argv[]) {
 	print_array(arr, len);
 	printf("Length of array: %d\n", len);
 
-	bubble_sort(arr, len);
+	selection_sort(arr, len);
 	printf("Sorted array: ");
 	print_array(arr, len);
 }

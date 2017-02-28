@@ -1,5 +1,4 @@
 #include "sort.h"
-#include <stdio.h>
 
 void bubble_sort(int arr[], int len) {
 	for (int i = 0; i < len; ++i) {
@@ -80,5 +79,20 @@ void merge_sort (int arr[], int len) {
 		merge_sort(arr + len1, len2);
 
 		merge(arr, len1, len2);
+	}
+}
+
+void selection_sort(int arr[], int len) {
+	for (int i = 0; i < len; ++i) {
+		int min = i;
+		for (int j = i + 1; j < len; ++j) {
+			if (arr[j] < arr[min]) {
+				min = j;
+			}
+		}
+
+		int temp = arr[min];
+		arr[min] = arr[i];
+		arr[i] = temp; 
 	}
 }
