@@ -90,9 +90,12 @@ void selection_sort(int arr[], int len) {
 				min = j;
 			}
 		}
-
-		int temp = arr[min];
-		arr[min] = arr[i];
-		arr[i] = temp; 
+		swap(&arr[i], &arr[min]);
 	}
+}
+
+static void swap(int *x, int *y) {
+	int temp = *x;
+	*x = *y;
+	*y = temp;
 }
